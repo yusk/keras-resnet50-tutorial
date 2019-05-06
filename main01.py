@@ -22,6 +22,7 @@ def main():
                 path_list.append(path)
                 array = ResNetModel.img_to_array(path)
                 print(array)
+                print(array.shape)
                 if animal == "cat":
                     y = [1, 0]
                 else:
@@ -37,6 +38,8 @@ def main():
     train_y = np.array(train_y)
     valid_X = np.array(valid_X)
     valid_y = np.array(valid_y)
+
+    print(train_X.shape)
 
     history = model.fit(train_X,
                         train_y,
