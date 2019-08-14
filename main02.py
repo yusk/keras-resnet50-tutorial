@@ -56,7 +56,7 @@ def main():
     itr_valid = AnimalsSequence("valid", batch_size)
 
     steps_per_epoch = math.ceil(itr_train.samples / batch_size)
-    validation_steps = math.ceil(itr_train.samples / batch_size)
+    validation_steps = math.ceil(itr_valid.samples / batch_size)
 
     history = model.fit_generator(itr_train,
                                   steps_per_epoch=steps_per_epoch,
